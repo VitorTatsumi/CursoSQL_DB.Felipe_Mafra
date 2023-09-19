@@ -17,3 +17,15 @@ EXEC CONSULTA
 
 -- COMANDO PARA EXCLUIR A PROCEDURE (DROP PROCEDURE NOMEDAPROCEDURE)
 DROP PROCEDURE CONSULTA
+	
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+--PROCEDURE SIMPLES COM PARÂMETROS
+CREATE PROCEDURE CONTA (@NUMERO1 INT, @NUMERO2 INT)
+AS
+BEGIN
+	SELECT @NUMERO1 + @NUMERO2 AS CONTA
+END
+	
+--COMANDO PARA EXECUTAR PROCEDURE. NÃO É NECESSÁRIO OS PARÊNTESES () PARA CHAMAR OS PARÂMETROS
+EXEC CONTA 10, 20
